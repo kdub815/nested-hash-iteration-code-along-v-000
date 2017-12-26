@@ -15,10 +15,8 @@ require 'pry'
   # }
 
 def remove_strawberry(contacts)
-  binding.pry
-  contacts["Freddy Mercury"][:favorite_ice_cream_flavors].any? do |attribute, value|
-    if attribute[value] == :favorite_ice_cream_flavors["strawberry"]
-      ice_cream_flavors.shift
-    end
+  #binding.pry 
+  if contacts["Freddy Mercury"][:favorite_ice_cream_flavors].include?("strawberry")
+      contacts["Freddy Mercury"][:favorite_ice_cream_flavors].delete("strawberry")
   end
 end
