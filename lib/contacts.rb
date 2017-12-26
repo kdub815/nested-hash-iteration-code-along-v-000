@@ -15,8 +15,9 @@ require 'pry'
   # }
 
 def remove_strawberry(contacts)
-  #binding.pry 
+  #binding.pry
   if contacts["Freddy Mercury"][:favorite_ice_cream_flavors].include?("strawberry")
       contacts["Freddy Mercury"][:favorite_ice_cream_flavors].delete("strawberry")
   end
+  contacts
 end
